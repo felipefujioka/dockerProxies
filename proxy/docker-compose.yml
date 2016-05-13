@@ -1,7 +1,7 @@
 version: '2'
 services:
   app1:
-    build: ../app1
+    build: ../app1/
     ports:
      - "8080:80"
 
@@ -9,3 +9,7 @@ services:
     build: ../app2
     ports:
      - "8090:80"
+  proxy:
+    build: ../proxyServer
+    ports:
+      - "80:80"
